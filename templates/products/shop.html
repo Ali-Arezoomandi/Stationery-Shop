@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Style/shop.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- haeder container -->
+    <header>
+        <!-- blue header on top -->
+        <div class="header-top">
+            <span class="date"></span>
+            <span>/</span>
+            <span class="timer"></span>
+        </div>
+
+        <section class="container">
+            <header-site></header-site>
+        </section>
+
+    </header>
+
+    <div class="path">
+        <a class="home">Home</a>
+        <span>></span>
+        <span class="shop">ShopAll</span>
+    </div>
+
+    <section class="shop-container">
+
+        <aside class="article">
+
+            <div class="top-aside">
+                <h4>Categories</h4>
+                <ul>
+                    <li class="li-cat active"> All Product</li>
+                    <li class="li-cat"> Color Paper</li>
+                    <li class="li-cat"> Highlighter</li>
+                    <li class="li-cat"> NoteBook</li>
+                    <li class="li-cat"> Pencil Case</li>
+                    <li class="li-cat"> Pack</li>
+                </ul>
+            </div>
+
+            <div class="between-aside">
+                <h4>Price Range</h4>
+                <input type="range">
+            </div>
+
+            <div class="bottom-aside">
+                <h4>Brands</h4>
+
+                <div class="label-input-container">
+
+
+                    <div class="label-container">
+
+                        <label for="kian">
+                            <input class="kian" type="checkbox" name="category" value="kian">
+                            <span id="kian" class="square"></span>
+                            Kian
+                        </label>
+                        <label for="vesta">
+                            <input class="vesta" type="checkbox" name="category" value="vesta">
+                            <span id="vesta" class="square"></span>
+                            Vesta
+                        </label>
+                        <label for="panter">
+                            <input class="panter" type="checkbox" name="category" value="panter">
+                            <span id="panter" class="square"></span>
+                            Panter
+                        </label>
+                        <label for="papco">
+                            <input class="papco" type="checkbox" name="category" value="papco">
+                            <span id="papco" class="square"></span>
+                            Papco
+                        </label>
+                        <label for="cclass">
+                            <input class="cclass" type="checkbox" name="category" value="cclass">
+                            <span id="cclass" class="square"></span>
+                            Cclass
+                        </label>
+
+                    </div>
+                </div>
+            </div>
+
+        </aside>
+
+        <div class="basket-container">
+            
+            <div class="all-basket"></div>
+
+            <div class="pagination">
+
+                <button class="pagination-btn">1</button>
+                <button class="pagination-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="1.5" d="M4 12h16m0 0l-6-6m6 6l-6 6"></path>
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <hr>
+    <!-- footer -->
+    <section class="footer-container">
+
+        <footer class="footer">
+            <footer-site></footer-site>
+        </footer>
+
+    </section>
+
+    <!-- back to top btn -->
+    <button class="back-top" title="Go to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M12 20V4m0 0l6 6m-6-6l-6 6"></path>
+        </svg>
+    </button>
+
+
+    <script type="module" src="./Js/app.js"></script>
+    <script type="module" src="./Js/shop.js"></script>
+</body>
+
+</html>

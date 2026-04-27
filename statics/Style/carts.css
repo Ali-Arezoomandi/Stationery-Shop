@@ -1,0 +1,61 @@
+.pen-cart {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    flex-direction: column;
+    width: 290px;
+    height: 185px;
+    padding-top: 10px;
+    padding-left: 25px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 1px gray;
+    line-height: 2rem;
+    overflow: hidden;
+    transition:
+        box-shadow 0.4s ease,
+        transform 0.4s ease;
+}
+
+.pen-cart:hover {
+    border: 1px solid var(--primary);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-10px);
+}
+
+.pen-cart:hover .circle-cart {
+    background-color: rgb(58, 90, 140, 0.2);
+}
+
+.pen-icon-cart {
+    color: var(--primary);
+    transition: transform 0.3s ease;
+}
+
+.pen-cart:hover .pen-icon-cart {
+    transform: scale(1.025);
+}
+
+.circle-cart {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 96px;
+    height: 96px;
+    background-color: rgb(58, 90, 140, 0.1);
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.pen-cart h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.pen-cart p {
+    color: rgb(107 114 128);
+    font-size: 0.875rem;
+    margin-top: 0;
+}

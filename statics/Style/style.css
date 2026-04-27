@@ -1,0 +1,238 @@
+:root {
+    --primary: #3a5a8c;
+    --bg: #f9f7f5;
+    --coral: #ff7f6e;
+    --mint: #8cc9a8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+.header-top {
+    background-color: var(--primary);
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--bg);
+    gap: 1.5rem;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.container-2 {
+    position: sticky;
+    height: 600px;
+    margin: 0 auto;
+    background-image: url("../Image/Header.webp"), linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9;
+}
+
+.carts-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    height: 350px;
+    margin-top: 70px;
+}
+
+.basket-sellers {
+    display: flex;
+    justify-content: center;
+}
+
+.basket-title {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.title {
+    color: rgb(45, 52, 54);
+    font-weight: 400;
+}
+
+.line {
+    width: 90px;
+    height: 3px;
+    border-radius: 100px;
+    background-color: var(--primary);
+}
+
+.view {
+    color: var(--primary);
+    transition: color 0.1s ease;
+}
+
+.view:hover {
+    color: var(--coral);
+}
+
+.view span {
+    position: relative;
+    top: 2px;
+}
+
+.best-sellers {
+    width: 1280px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.offer {
+    width: 100vw;
+    height: 430px;
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 4rem;
+    background-size: 20px 20px;
+    background-image: radial-gradient(#ffffff13 1px, transparent 1px);
+}
+
+.offer-title {
+    color: var(--mint);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.25rem;
+    font-size: 0.875rem;
+}
+
+.offer-main-title {
+    color: white;
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.time-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    line-height: 1.5rem;
+    padding: 1rem 0.7rem;
+    padding-bottom: 0.5rem;
+}
+
+.time-number {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.time-type {
+    font-size: 0.75rem;
+    opacity: 0.7;
+    color: white;
+}
+
+.offer-btn {
+    color: var(--primary);
+    background-color: #fff;
+    opacity: 0.9;
+    border: none;
+    padding: 1.3rem 2.6rem;
+    border-radius: 10px;
+    font-size: 100%;
+    margin-top: 3rem;
+    font-weight: 700;
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.offer-btn:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+.comment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.comm-title {
+    color: rgb(45 52 54);
+    font-weight: 300;
+    font-size: 1.875rem;
+}
+
+.comm-container {
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+    margin-top: 60px;
+}
+
+.footer-container {
+    width: 100wh;
+    background-color: #fff;
+    border-top: 1px solid rgba(152, 151, 151, 0.373);
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-top: 3rem;
+}
+
+hr {
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+}
+
+.back-top {
+    position: fixed;
+    top: 600px;
+    left: 1450px;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary);
+    border-radius: 100px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}

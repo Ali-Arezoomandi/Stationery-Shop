@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="center-div">
+
+    <!-- carts -->
+    <section class="carts-container">
+        {% include 'products/carts.html' %}
+    </section>
+    
+</div>
+
+<div class="center-div">
+
+    <!-- best-sellers -->
+    <section class="basket-title">
+        <div class="title-container">
+            <h1 class="title">Best Sellers</h1>
+            <div class="line"></div>
+        </div>
+        <div class="view">
+            View all
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="1.5" d="M4 12h16m0 0l-6-6m6 6l-6 6"></path>
+                </svg>
+            </span>
+        </div>
+    </section>
+    
+    <section class="best-sellers"></section>
+
+</div>
+
+<div class="center-div">
+
+    <!-- offer -->
+    <section class="offer">
+
+        <p class="offer-title">Limited Time Offer</p>
+        <h1 class="offer-main-title">Free Shipping on Orders Over $50</h1>
+
+        <div class="time-container">
+            <div class="time">
+                <span class="time-number">04</span>
+                <span class="time-type">Hrs</span>
+            </div>
+            <div class="time">
+                <span class="time-number">12</span>
+                <span class="time-type">Mins</span>
+            </div>
+            <div class="time">
+                <span class="time-number">45</span>
+                <span class="time-type">Seccs</span>
+            </div>
+        </div>
+
+        <button class="offer-btn">Shop Collection</button>
+
+    </section>
+
+</div>
+
+<div class="center-div">
+
+    <!-- comment -->
+    <section class="comment">
+        <h1 class="comm-title">What Our Customers Say</h1>
+        <div class="comm-container">
+        </div>
+    </section>
+
+</div>
+
+<hr>
+
+{% endblock %}
