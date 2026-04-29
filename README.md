@@ -19,13 +19,13 @@ This project represents my initial steps into building e-commerce functionality.
 **HomePage**
 
 <div align="center">
-  <img src="readme/1.png" width="500">
+  <img src="readme/1.jpg" width="500">
 </div>
 
 **Best Selers** 
 
 <div align="center">
-  <img src="readme/2.png" width="500">
+  <img src="readme/2.jpg" width="500">
 </div>
 
 **ShopPage** 
@@ -37,7 +37,7 @@ This project represents my initial steps into building e-commerce functionality.
 **LoginPage**
 
 <div align="center">
-  <img src="readme/3.jpg" width="500">
+  <img src="readme/4.jpg" width="500">
 </div>
 
 ---
