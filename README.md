@@ -14,6 +14,32 @@ This project represents my initial steps into building e-commerce functionality.
 
 > ⚠️ **Note:** This is a **learning/practice project**, not a production-ready application.
 
+ ## Shots
+
+**HomePage**
+
+<div align="center">
+  <img src="readme/1.png" width="500">
+</div>
+
+**Best Selers** 
+
+<div align="center">
+  <img src="readme/2.png" width="500">
+</div>
+
+**ShopPage** 
+
+<div align="center">
+  <img src="readme/3.jpg" width="500">
+</div>
+
+**LoginPage**
+
+<div align="center">
+  <img src="readme/3.jpg" width="500">
+</div>
+
 ---
 
 ## ✨ Current Features
