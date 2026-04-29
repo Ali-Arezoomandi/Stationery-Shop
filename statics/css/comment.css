@@ -1,0 +1,49 @@
+.comm {
+    width: 365px;
+    height: 220px;
+    background-color: #fff;
+    border: 1px solid rgba(69, 71, 72, 0.263);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 2rem;
+    line-height: 1.5rem;
+}
+
+/* .comm-score {
+    color: var(--coral);
+    margin-top: 20px;
+} */
+
+.comm-text {
+    color: rgb(75 85 99);
+    width: 300px;
+    /* margin-top: 1rem; */
+}
+
+.comm-people {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+}
+
+.people-info {
+    line-height: 1rem;
+}
+
+.name {
+    font-weight: 400;
+    font-size: 0.875rem;
+}
+
+.job {
+    color: rgb(156 163 175);
+    font-size: 0.75rem;
+}

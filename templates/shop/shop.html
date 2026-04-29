@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load shop_tags %}
+
+{% block content %}
+
+<div class="path">
+    <a href="{% url 'shop:home' %}" class="home">Home</a>
+    <span>></span>
+    <span class="shop-path">ShopAll</span>
+</div>
+
+<section class="shop-container">
+
+    <aside class="article">
+
+        {% shop_category %}
+
+        <div class="between-aside">
+            <h4>Price Range</h4>
+            <input type="range">
+        </div>
+        
+        {% shop_brands %}
+
+    </aside>
+
+    <div class="basket-container">
+
+        <div class="all-basket">
+            
+            {% for prod in products %}
+                {% include 'shop/single-product.html' with disscount=prod.disscount name=prod.name score=prod.score price=prod.price %}
+            {% endfor %}
+            
+        </div>      
+
+        <div class="pagination">
+            {% if products.has_previous %}
+            <a alt="" href="?page={{ products.previous_page_number }}">
+                <button class="pagination-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" style="transform: scaleX(-1);">
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M4 12h16m0 0l-6-6m6 6l-6 6"></path>
+                    </svg>
+                </button>
+            </a>
+            {% endif %}
+            
+            {% for page_index in products.paginator.page_range %}
+                {% if products.number == page_index %}
+                    <a href="?page={{ page_index }}"><button class="pagination-btn active">{{ page_index }}</button></a>
+                {% else %}
+                    <a href="?page={{ page_index }}"><button class="pagination-btn">{{ page_index }}</button></a>
+                {% endif %}
+            {% endfor %}
+
+            {% if products.has_next %}
+            <a alt="" href="?page={{ products.next_page_number }}">
+                <button class="pagination-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M4 12h16m0 0l-6-6m6 6l-6 6"></path>
+                    </svg>
+                </button>
+            </a>
+            {% endif %}
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

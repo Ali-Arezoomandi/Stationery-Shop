@@ -1,0 +1,56 @@
+{% load static %}
+{% load shop_tags %}
+
+<div class="single-cart">
+
+    <div class="basket-image">
+        {% if disscount != 0 %}
+        <div class="sale">SALE</div>
+        {% endif %}
+        <img class="cart-image" src="{{ prod.image.url }}" />
+        <button class="cart-eye">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                <g fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path
+                        d="M3.275 15.296C2.425 14.192 2 13.639 2 12c0-1.64.425-2.191 1.275-3.296C4.972 6.5 7.818 4 12 4s7.028 2.5 8.725 4.704C21.575 9.81 22 10.361 22 12c0 1.64-.425 2.191-1.275 3.296C19.028 17.5 16.182 20 12 20s-7.028-2.5-8.725-4.704Z">
+                    </path>
+                    <path d="M15 12a3 3 0 1 1-6 0a3 3 0 0 1 6 0Z"></path>
+                </g>
+            </svg>
+        </button>
+        <button class="cart-basket">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                <g fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round"
+                        d="m2 3l.265.088c1.32.44 1.98.66 2.357 1.184S5 5.492 5 6.883V9.5c0 2.828 0 4.243.879 5.121c.878.879 2.293.879 5.121.879h8">
+                    </path>
+                    <path d="M7.5 18a1.5 1.5 0 1 1 0 3a1.5 1.5 0 0 1 0-3Zm9 0a1.5 1.5 0 1 1 0 3a1.5 1.5 0 0 1 0-3Z">
+                    </path>
+                    <path stroke-linecap="round" d="M11 9H8"></path>
+                    <path
+                        d="M5 6h11.45c2.055 0 3.083 0 3.528.674c.444.675.04 1.619-.77 3.508l-.429 1c-.378.882-.567 1.322-.942 1.57c-.376.248-.856.248-1.815.248H5">
+                    </path>
+                </g>
+            </svg>
+        </button>
+    </div>
+
+    <h3 class="cart-name">{{ name }}</h3>
+
+    <div class="cart-score">
+
+
+        {% generate_star.html score %}
+        <span class="cart-score-number">{{ score }}</span>
+    </div>
+
+    <div class="cart-price">
+        {% if disscount == 0 %}
+        <span class="cart-peice-numebr">$ {{ price }}</span>
+        {% else %}
+        <span class="cart-peice-numebr">$ {{ disscount }}</span>
+        <span class="cart-discount-numebr">${{price }}</span>
+        {% endif %}
+    </div>
+
+</div>

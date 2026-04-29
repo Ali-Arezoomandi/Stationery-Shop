@@ -1,0 +1,9 @@
+<div class="top-aside">
+    <h4>Categories</h4>
+    <ul>
+        <li class="li-cat active"><a href="{% url 'shop:shop' %}">All Product</a></li>
+        {% for cat in categories %}
+            <li class="li-cat"><a href="{% url 'shop:category' cat_name=cat.name  %}">{{cat.name|capfirst}}</a></li>   
+        {% endfor %}
+    </ul>
+</div>

@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load shop_tags %}
+
+{% block content %}
+
+<div class="center-div">
+
+    <!-- header's inforation -->
+    <section class="container-2">
+        <div class="header-info">
+            <span class="new-coll">New Collection 2024</span>
+            <h1>Write Your
+                <span>Story. <svg class="absolute w-full h-3 -bottom-1 left-0 text-[#FF7F6E] opacity-70"
+                        viewBox="0 0 100 10" preserveAspectRatio="none">
+                        <path d="M0 5 Q 50 10 100 5" stroke="currentColor" stroke-width="3" fill="none"></path>
+                    </svg></span>
+            </h1>
+            <p>Premium stationery for students, artists & professionals. Discover tools that inspire creativity and
+                organize
+                your life.</p>
+            <div class="btn-container">
+                <button class="shop-btn"><a style="color: white;" href="{% url 'shop:shop' %}">Shop Now</a></button>
+                <button class="video-btn">
+                    <span class="video-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <g fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path
+                                    d="M15.414 10.941c.781.462.781 1.656 0 2.118l-4.72 2.787C9.934 16.294 9 15.71 9 14.786V9.214c0-.924.934-1.507 1.694-1.059z">
+                                </path>
+                            </g>
+                        </svg>
+                    </span>
+                    Watch Video
+                </button>
+            </div>
+        </div>
+        <span class="move-icon"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24">
+                <g fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path
+                        d="M16 22c-1.886 0-2.828 0-3.414-.586S12 19.886 12 18V6c0-1.886 0-2.828.586-3.414S14.114 2 16 2h2c1.886 0 2.828 0 3.414.586S22 4.114 22 6v12c0 1.886 0 2.828-.586 3.414S19.886 22 18 22z">
+                    </path>
+                    <path stroke-linecap="round" d="M12 12h2m-2-6h2m-2 12h2m-2-3h3m-3-6h3"></path>
+                    <path
+                        d="M2 5.8v-.95C2 3.276 3.343 2 5 2s3 1.276 3 2.85v.95m-6 0s1.125.95 3 .95s3-.95 3-.95m-6 0v9.734c0 .591 0 .887.038 1.177q.067.516.25 1.005c.102.275.241.54.52 1.069l1.18 2.242M8 5.8v9.734c0 .591 0 .887-.038 1.177q-.066.516-.25 1.005c-.102.275-.241.54-.52 1.069l-1.18 2.242m0 0l-.288.548A.81.81 0 0 1 5 22a.81.81 0 0 1-.724-.425l-.288-.548m2.024 0H3.988">
+                    </path>
+                </g>
+            </svg></span>
+    </section>
+
+</div>
+
+<div class="center-div">
+
+    <!-- carts -->
+    <section class="carts-container">
+        {% include 'shop/carts.html' %}
+    </section>
+
+</div>
+
+<div class="center-div">
+
+    <!-- best-sellers -->
+    <section class="basket-title">
+        <div class="title-container">
+            <h1 class="title">Best Sellers</h1>
+            <div class="line"></div>
+        </div>
+        <a href="{% url 'shop:shop' %}" class="view">
+            View all
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="1.5" d="M4 12h16m0 0l-6-6m6 6l-6 6"></path>
+                </svg>
+            </span>
+        </a>
+    </section>
+
+    <section class="best-sellers">
+        
+        {% for prod in products %}
+            {% include 'shop/single-product.html' with disscount=prod.disscount name=prod.name score=prod.score price=prod.price %}
+        {% endfor %}
+
+    </section>
+
+</div>
+
+<div class="center-div">
+
+    <!-- offer -->
+    <section class="offer">
+
+        <p class="offer-title">Limited Time Offer</p>
+        <h1 class="offer-main-title">Free Shipping on Orders Over $50</h1>
+
+        <div class="time-container">
+            <div class="time">
+                <span class="time-number">04</span>
+                <span class="time-type">Hrs</span>
+            </div>
+            <div class="time">
+                <span class="time-number">12</span>
+                <span class="time-type">Mins</span>
+            </div>
+            <div class="time">
+                <span class="time-number">45</span>
+                <span class="time-type">Seccs</span>
+            </div>
+        </div>
+
+        <button class="offer-btn">Shop Collection</button>
+
+    </section>
+
+</div>
+
+<div class="center-div">
+
+    <!-- comment -->
+    <section class="comment">
+        <h1 class="comm-title">What Our Customers Say</h1>
+        <div class="comm-container">
+            {% include 'shop/comment.html' %}
+        </div>
+    </section>
+
+</div>
+
+<hr>
+
+{% endblock %}

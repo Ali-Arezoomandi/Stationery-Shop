@@ -1,0 +1,178 @@
+.container {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.header-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: var(--primary);
+    font-size: 1.3rem;
+    font-weight: 535;
+}
+
+.pen-icon svg {
+    transition: transform 0.3s ease;
+}
+
+.header-title:hover .pen-icon svg {
+    transform: rotate(16deg);
+}
+
+.pen-icon {
+    margin-top: 5px;
+}
+
+.header-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.header-links li {
+    list-style: none;
+}
+
+.links {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 450;
+    color: black;
+    transition: transform 0.3s ease;
+}
+
+.links:hover {
+    transform: translateY(-2px);
+}
+
+.home {
+    color: var(--primary);
+}
+
+.sale {
+    color: var(--coral);
+}
+
+.header-right {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.inputs {
+    width: 16rem;
+    height: 37px;
+    border-radius: 24px;
+    background-color: #fff;
+    padding-left: 30px;
+    border: none;
+    box-shadow: 0 0 3px gray;
+    outline: none;
+    transition: box-shadow 0.2s ease;
+}
+
+.inputs:focus {
+    box-shadow: 0 0 0 1px var(--primary);
+}
+
+.inputs::placeholder {
+    opacity: 0.5;
+}
+
+.glasses {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: var(--bg);
+    position: relative;
+    left: 30px;
+    top: 3px;
+    opacity: 0.4;
+}
+
+.icon {
+    position: relative;
+    color: var(--primary);
+    margin-top: 5px;
+    transition: transform 0.2s ease;
+    display: inline-flex;
+}
+
+.icon:hover::after {
+    content: "Login";
+    position: absolute;
+    bottom: -20px;
+    left: 60%;
+    transform: translateX(-50%);
+    background-color: white;
+    color: #2d3436;
+    padding: 4px 7px;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    font-family: sans-serif;
+    z-index: 100;
+    font-weight: 700;
+}
+
+.signup:hover::after {
+    content: "Sign Up";
+}
+
+.logout:hover::after {
+    content: "Logout";
+}
+
+.profile:hover::after {
+    content: "Profile";
+}
+
+.basket:hover::after {
+    content: "Basket";
+}
+
+.icon:hover::before {
+    content: "";
+    position: absolute;
+    bottom: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #1f2937 transparent;
+    z-index: 100;
+}
+
+.icon:hover {
+    transform: translateY(-2px);
+}
+
+.basket-icon::after {
+    content: "2";
+    color: white;
+    font-size: 10px;
+    width: 17px;
+    height: 17px;
+    background-color: var(--coral);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    left: 12px;
+    bottom: 20px;
+}

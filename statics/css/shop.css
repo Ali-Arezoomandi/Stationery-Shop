@@ -1,0 +1,254 @@
+:root {
+    --primary: #3a5a8c;
+    --bg: #f9f7f5;
+    --coral: #ff7f6e;
+    --mint: #8cc9a8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+.header-top {
+    background-color: var(--primary);
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--bg);
+    gap: 1.5rem;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.footer-container {
+    width: 100wh;
+    background-color: #fff;
+    border-top: 1px solid rgba(152, 151, 151, 0.373);
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-top: 3rem;
+}
+
+.back-top {
+    position: fixed;
+    top: 600px;
+    left: 1450px;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary);
+    border-radius: 100px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.path {
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+}
+
+.home {
+    position: relative;
+    color: rgb(58 90 140);
+    cursor: pointer;
+}
+
+.shop-path {
+    position: relative;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.home::after,
+.shop-path::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: -2px;
+    background-color: var(--primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.home:hover,
+.shop-path:hover {
+    color: var(--coral);
+}
+
+.home:hover::after,
+.shop-path:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.home:not(:hover)::after,
+.shop-path:not(:hover)::after {
+    transform-origin: left;
+}
+
+.article h4 {
+    color: rgb(45 52 54);
+    padding: 1rem 0;
+}
+
+.li-cat {
+    list-style: none;
+    width: fit-content;
+    padding-left: 0.85rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    line-height: 1.55rem;
+    color: var(--primary);
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.li-cat a {
+    color: var(--primary);
+}
+
+.li-cat::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: var(--primary);
+    border-radius: 10px;
+    top: 8px;
+    left: 0%;
+    opacity: 0;
+}
+
+.li-cat.active {
+    color: var(--coral);
+}
+
+.li-cat.active::before {
+    opacity: 1;
+}
+
+.point {
+    visibility: hidden;
+    width: 6px;
+    height: 6px;
+    background-color: var(--primary);
+    border-radius: 100px;
+}
+
+.label-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.label-container input {
+    opacity: 0;
+}
+
+label {
+    color: rgb(45 52 54);
+    width: fit-content;
+}
+
+.square {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-color: #fff;
+    border: 1px solid rgba(125, 124, 124, 0.251);
+    border-radius: 5px;
+    transition: border 0.3s ease;
+    margin-right: 0.3rem;
+}
+
+.square.active {
+    background-color: var(--primary);
+}
+
+label:hover .square {
+    border: 1px solid var(--primary);
+}
+
+.shop-container {
+    max-width: 1280px;
+    min-height: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.basket-container {
+    width: 936px;
+    min-height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.all-basket {
+    width: 936px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.pagination-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: var(--bg);
+    border: 1px solid rgba(128, 128, 128, 0.449);
+    color: var(--primary);
+    font-size: 1.1rem;
+    transition: box-shadow 0.3s ease;
+    margin-right: 3px;
+}
+
+.pagination-btn:hover {
+    box-shadow: 0 0 0 1px var(--primary);
+}
+
+.pagination-btn.active {
+    background-color: var(--primary);
+    color: white;
+}
+
+.pagination-btn.active:hover {
+    background-color: #1c417d;
+}
