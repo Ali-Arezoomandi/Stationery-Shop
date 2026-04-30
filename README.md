@@ -151,7 +151,6 @@ As this is a personal learning project, I'm not actively seeking contributions. 
 
 ## ✍️ Author
 
-Ali-Arezoomandi
-📧 Contact: [ali.arezoomandi1723.email@example.com]
-💻 GitHub: https://github.com/Ali-Arezoomandi
-
+Ali-Arezoomandi & Komeil-Ahankoobi
+📧 Contact: [ali.arezoomandi1723.email@example.com] & [komeilahankoobi@gmail.com]
+💻 GitHub: https://github.com/Ali-Arezoomandi & https://github.com/Komeil-Ahankoobi
